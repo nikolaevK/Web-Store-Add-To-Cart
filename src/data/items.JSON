@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Pen 1",
+    "price": 150,
+    "imgUrl": "/imgs/pen4.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Pen 2",
+    "price": 1199,
+    "imgUrl": "/imgs/pen5.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Pen 3",
+    "price": 30,
+    "imgUrl": "/imgs/pen6.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Pen 4",
+    "price": 400,
+    "imgUrl": "/imgs/pen7.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Pen 5",
+    "price": 15000,
+    "imgUrl": "/imgs/pen8.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Pen 6",
+    "price": 1000,
+    "imgUrl": "/imgs/pen9.jpeg"
+  }
+]
