@@ -6,7 +6,8 @@ const cors = require("cors");
 app.use(express.json());
 app.use(
   cors({
-    origin: `https://setting1:5173`,
+    origin:
+      "https://633795f65f7e5b000882108d--gilded-cendol-93ca80.netlify.app",
   })
 );
 
