@@ -12,19 +12,16 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
 
   function redirectFunc() {
-    fetch(
-      "https://https://serene-sea-47865.herokuapp.com/create-checkout-session",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          cartItems,
-          storeItems,
-        }),
-      }
-    )
+    fetch("https://https://serene-sea-47865.herokuapp.com/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        cartItems,
+        storeItems,
+      }),
+    })
       .then((res) => {
         if (res.ok) return res.json();
         return res.json().then((json) => Promise.reject(json));
