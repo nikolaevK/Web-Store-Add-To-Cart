@@ -13,7 +13,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
 
   function redirectFunc() {
     fetch(
-      "https://git.heroku.com/serene-sea-47865.git/create-checkout-session",
+      "https://https://serene-sea-47865.herokuapp.com/create-checkout-session",
       {
         method: "POST",
         headers: {
