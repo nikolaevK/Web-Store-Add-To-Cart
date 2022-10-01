@@ -13,7 +13,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
 
   function redirectFunc() {
     fetch(
-      "https://gilded-cendol-93ca80.netlify.app:3000/create-checkout-session",
+      "http://git.heroku.com/serene-sea-47865.git/create-checkout-session",
       {
         method: "POST",
         headers: {
