@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://gilded-cendol-93ca80.netlify.app",
+    origin: "https://gilded-cendol-93ca80.netlify.app/",
   })
 );
 
