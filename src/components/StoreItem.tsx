@@ -17,6 +17,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     removeFromCart,
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
+
   return (
     <Card className="h-100" style={{ backgroundColor: "transparent" }}>
       <Card.Img

@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import toast from "react-hot-toast";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
@@ -61,6 +62,9 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         });
       }
     });
+    toast.success("Item Added To Cart", {
+      position: "bottom-center",
+    });
   }
 
   function decreaseCartQuantity(id: number) {
@@ -77,11 +81,17 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         });
       }
     });
+    toast.error("Item Removed From Cart", {
+      position: "bottom-center",
+    });
   }
 
   function removeFromCart(id: number) {
     setCartItems((currItems) => {
       return currItems.filter((item) => item.id !== id);
+    });
+    toast.error("Item Removed From Cart", {
+      position: "bottom-center",
     });
   }
 
