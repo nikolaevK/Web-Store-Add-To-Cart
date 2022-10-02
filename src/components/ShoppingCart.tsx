@@ -12,7 +12,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
 
   function redirectFunc() {
-    fetch("https://https://serene-sea-47865.herokuapp.com/", {
+    fetch("https://serene-sea-47865.herokuapp.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
