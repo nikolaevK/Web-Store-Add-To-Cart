@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "../components/CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
@@ -53,7 +53,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
               }, 0)
             )}
           </div>
-          <button onClick={redirectFunc}>Click</button>
+          {cartItems.length > 0 ? (
+            <Button onClick={redirectFunc} className="btn-dark">
+              Proceed to Checkout
+            </Button>
+          ) : null}
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
