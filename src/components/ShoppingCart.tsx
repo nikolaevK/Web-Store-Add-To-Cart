@@ -3,6 +3,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "../components/CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
+import toast from "react-hot-toast";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -12,6 +13,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
 
   function redirectFunc() {
+    toast.loading("Loading checkout page");
     fetch("https://serene-sea-47865.herokuapp.com/", {
       method: "POST",
       headers: {
@@ -27,6 +29,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         return res.json().then((json) => Promise.reject(json));
       })
       .then(({ url }) => {
+        toast.dismiss();
         window.location = url;
       })
       .catch((e) => {
